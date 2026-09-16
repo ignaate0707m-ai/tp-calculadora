@@ -1,0 +1,152 @@
+/* Reset básico y fondo oscuro moderno */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    background-color: #1f1f1f;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.btn-nav {
+    background: transparent;
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-nav:hover, .btn-nav.activo {
+    background-color: #00e5ff;
+    color: #121212;
+}
+
+/* Contenedor principal centrado */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Diseño de la Calculadora */
+.caja-calc {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    width: 320px;
+}
+
+.visor-texto {
+    background-color: #0a0a0a;
+    color: #00e5ff;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+    min-height: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    word-break: break-all;
+}
+
+.grilla-teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Teclas genéricas */
+.tecla {
+    height: 55px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.tecla:hover {
+    background-color: #3a3a3a;
+}
+
+/* Colores específicos de teclas */
+.tecla.accion {
+    background-color: #ff3b30;
+}
+.tecla.accion:hover {
+    background-color: #ff5249;
+}
+
+.tecla.operacion {
+    background-color: #00e5ff;
+    color: #000;
+}
+.tecla.operacion:hover {
+    background-color: #33ebff;
+}
+
+.tecla.larga {
+    grid-column: span 2;
+}
+
+/* Estilos para Historial y Acerca de */
+.panel-info {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.panel-info h2 {
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+.panel-info p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+#lista-historial {
+    list-style: none;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#lista-historial li {
+    background: #2a2a2a;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 3px;
+    border-left: 2px solid #00e5ff;
+}
